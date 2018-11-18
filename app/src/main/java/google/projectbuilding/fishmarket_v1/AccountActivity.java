@@ -28,6 +28,6 @@ public class AccountActivity extends AppCompatActivity {
         noTelp.setText( getDataUser.getString("parse_noTelp_user","-"));
         email.setText( getDataUser.getString("parse_email_user","-"));
         tglLahir.setText( getDataUser.getString("parse_tglLahir_user","-"));
-        alamat.setText( getDataUser.getString("parse_alamatr_user","-"));
+        alamat.setText( getDataUser.getString("parse_alamat_user","-"));
     }
 }

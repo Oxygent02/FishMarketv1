@@ -109,7 +109,7 @@
         android:id="@+id/label_Alamat_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tanggal Lahir"
+        android:text="Alamat"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="23.3dp"
         android:textColor="@color/colorLabelProfile"
