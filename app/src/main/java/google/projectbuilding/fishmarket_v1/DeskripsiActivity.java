@@ -47,5 +47,11 @@ public class DeskripsiActivity extends AppCompatActivity {
     }
 
     public void click_beli(View view) {
+        Intent intent = new Intent(DeskripsiActivity.this, CheckOutActivity.class);
+
+        intent.putExtra("nama_toCheckout", getNama);
+        intent.putExtra("image_toCheckout", getImage);
+
+        startActivity(intent);
     }
 }

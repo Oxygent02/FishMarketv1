@@ -1,9 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckOutActivity">
+    android:orientation="vertical"
+    tools:context=".CheckOutActivity"
+    android:padding="20dp">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_nelayan_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#cccccc"
+        android:text="Nelayan A"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/fab_margin">
+
+        <ImageView
+            android:id="@+id/img_fish_checkout"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:src="@color/colorButtonBeli"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fish_name_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Nama Ikan"/>
+
+            <TextView
+                android:id="@+id/tv_fish_price_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#f64e0e"
+                android:layout_marginLeft="20dp"
+                android:text="100000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+
+                <Button
+                    android:id="@+id/tv_weight_checkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 KG"/>
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:onClick="click_minus"/>
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:onClick="click_tambah"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="310dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Harga"
+            android:textSize="20sp"
+            android:textColor="@color/colorDetailName"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_total_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 100.000"
+                android:textSize="20sp"
+                android:textColor="@color/colorButtonBeli"/>
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BAYAR"
+                android:background="@color/colorButtonBeli"
+                android:onClick="click_bayar"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
