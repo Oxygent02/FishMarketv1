@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Reinhard JS
 
+    // Perubahan master
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
