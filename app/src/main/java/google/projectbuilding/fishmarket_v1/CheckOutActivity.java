@@ -22,6 +22,7 @@ public class CheckOutActivity extends AppCompatActivity {
 
     String getNama = "NAMA";
     String getImage = "IMAGE";
+    String getPrice = "HARGA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class CheckOutActivity extends AppCompatActivity {
         Intent intent = getIntent();
         getNama = intent.getStringExtra("nama_toCheckout");
         getImage = intent.getStringExtra("image_toCheckout");
+        getPrice = intent.getStringExtra("price");
+
 
         if (getImage.isEmpty()) {
             image.setVisibility(View.GONE);
@@ -49,6 +52,8 @@ public class CheckOutActivity extends AppCompatActivity {
         price = findViewById(R.id.tv_fish_price_checkout);
         weight = findViewById(R.id.tv_weight_checkout);
         total = findViewById(R.id.tv_total_checkout);
+
+        price.setText(getPrice);
 
         priceCount = Integer.parseInt(price.getText().toString());
         total.setText(String.valueOf(priceCount));
@@ -76,5 +81,8 @@ public class CheckOutActivity extends AppCompatActivity {
     }
 
     public void click_bayar(View view) {
+        Intent intent = new Intent(CheckOutActivity.this, InfoPembayaranActivity.class);
+        intent.putExtra("total_toPay", total.getText().toString());
+        startActivity(intent);
     }
 }

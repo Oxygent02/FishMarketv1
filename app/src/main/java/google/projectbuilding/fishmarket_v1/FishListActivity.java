@@ -2,6 +2,7 @@ package google.projectbuilding.fishmarket_v1;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -18,6 +19,8 @@ import android.widget.Toast;
 
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabSelectListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,6 +44,17 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                if (tabId == R.id.tab_user) {
+                    Intent intent = new Intent(FishListActivity.this, AccountActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         adapter = new FishListAdapter(fishList);

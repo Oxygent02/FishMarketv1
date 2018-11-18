@@ -85,14 +85,10 @@ public class MainActivity extends AppCompatActivity {
                         final String name_detail = getFishOnDetail.getString("strTeam");
                         String image_detail = getFishOnDetail.getString("strTeamBadge");
 
-
                         Intent intent = new Intent(MainActivity.this, DeskripsiActivity.class);
-
                         intent.putExtra("nama", name_detail);
                         intent.putExtra("deskripsi", desc_detail);
-
                         intent.putExtra("image", image_detail);
-
                         startActivity(intent);
 
                     } catch (JSONException e) {

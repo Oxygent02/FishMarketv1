@@ -12,13 +12,14 @@ import com.bumptech.glide.Glide;
 
 public class DeskripsiActivity extends AppCompatActivity {
 
-    TextView deskripsi,nama;
+    TextView deskripsi, nama, price;
 
     ImageView image;
 
     public static String getNama = "NAMA";
     public static String getDeskripsi = "DESKRIPSI";
     public static String getImage = "IMAGE";
+    public static String getPrice = "PRICE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,13 @@ public class DeskripsiActivity extends AppCompatActivity {
         nama = findViewById(R.id.tv_fish_name_detail);
         deskripsi = findViewById(R.id.tv_deskripsi);
         image = findViewById(R.id.img_fish_detail);
+        price = findViewById(R.id.tv_fish_price);
 
         Intent intent = getIntent();
         getNama = intent.getStringExtra("nama");
         getDeskripsi = intent.getStringExtra("deskripsi");
         getImage = intent.getStringExtra("image");
+        getPrice = intent.getStringExtra("price");
 
         if (getImage.isEmpty()) {
             image.setVisibility(View.GONE);
@@ -44,14 +47,14 @@ public class DeskripsiActivity extends AppCompatActivity {
 
         nama.setText(getNama);
         deskripsi.setText(getDeskripsi);
+        price.setText(getPrice);
     }
 
     public void click_beli(View view) {
         Intent intent = new Intent(DeskripsiActivity.this, CheckOutActivity.class);
-
+        intent.putExtra("price", getPrice);
         intent.putExtra("nama_toCheckout", getNama);
         intent.putExtra("image_toCheckout", getImage);
-
         startActivity(intent);
     }
 }

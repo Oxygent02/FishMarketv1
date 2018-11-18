@@ -10,7 +10,6 @@ import android.widget.EditText;
 public class LoginActivity extends AppCompatActivity {
 
     EditText editUsername;
-
     SharedPreferences sharedLogin;
 
     @Override
@@ -21,9 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         editUsername = findViewById(R.id.edt_username);
 
         sharedLogin = getSharedPreferences("login", MODE_PRIVATE);
-
-        Intent intent = new Intent(LoginActivity.this, FishListActivity.class);
-        startActivity(intent);
     }
 
     public void click_login(View view) {
@@ -31,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         editor.putString("parse_username",editUsername.getText().toString());
         editor.apply();
 
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, FishListActivity.class);
         startActivity(intent);
     }
 

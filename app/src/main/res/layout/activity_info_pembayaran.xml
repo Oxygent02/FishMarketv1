@@ -4,11 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoPembayaranActivity">
+    tools:context=".InfoPembayaranActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MOHON PEMBAYARAN MELALUI BCA 36127219217219 A.N Supriyono"/>
+        android:text="MOHON PEMBAYARAN MELALUI BCA 36127219217219 A.N Supriyono"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp 0"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
 
 </LinearLayout>
