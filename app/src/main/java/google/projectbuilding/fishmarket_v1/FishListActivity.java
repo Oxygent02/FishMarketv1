@@ -69,12 +69,23 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
                 .setCallback(new FutureCallback<String>() {
                     @Override
                     public void onCompleted(Exception e, String data) {
+                        if (fishList.size() > 0){
+                            int count = fishList.size();
+                            fishList.clear();
+                            adapter.notifyItemRangeRemoved(0, count);
+                        }
+
                         processData(data);
                     }
                 });
     }
 
     private void getData(String category){
+        if (category.isEmpty()){
+            getData();
+            return;
+        }
+
         Ion.with(this)
                 .load("http://192.168.1.7/HF/DataIkan/getIkanBy")
                 .setBodyParameter("kategori", category)
@@ -82,18 +93,18 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
                 .setCallback(new FutureCallback<String>() {
                     @Override
                     public void onCompleted(Exception e, String data) {
+                        if (fishList.size() > 0){
+                            int count = fishList.size();
+                            fishList.clear();
+                            adapter.notifyItemRangeRemoved(0, count);
+                        }
+
                         processData(data);
                     }
                 });
     }
 
     private void processData(String data){
-
-        if (fishList.size() > 0){
-            int count = fishList.size();
-            fishList.clear();
-            adapter.notifyItemRangeRemoved(0, count);
-        }
 
         try {
             JSONObject json = new JSONObject(data);
