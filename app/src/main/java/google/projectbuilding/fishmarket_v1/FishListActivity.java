@@ -6,16 +6,12 @@ import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Toast;
 
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
@@ -43,6 +39,7 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
         setContentView(R.layout.activity_fish_list);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(0xFFFFFFFF);
         setSupportActionBar(toolbar);
 
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
@@ -79,7 +76,8 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
 
     private void getData(String category){
         Ion.with(this)
-                .load("http://192.168.1.7/HF/DataIkan/getIkanAll")
+                .load("http://192.168.1.7/HF/DataIkan/getIkanBy")
+                .setBodyParameter("kategori", category)
                 .asString()
                 .setCallback(new FutureCallback<String>() {
                     @Override
@@ -90,6 +88,12 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
     }
 
     private void processData(String data){
+
+        if (fishList.size() > 0){
+            int count = fishList.size();
+            fishList.clear();
+            adapter.notifyItemRangeRemoved(0, count);
+        }
 
         try {
             JSONObject json = new JSONObject(data);
@@ -118,13 +122,6 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
             e.printStackTrace();
         }
 
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
-//        fishList.add(new FishModel("http://web.com/image.jpg", "Nama Ikan 1", "Rp. 20.000/kg", "Budi Utama"));
     }
 
     @Override
@@ -145,7 +142,7 @@ public class FishListActivity extends AppCompatActivity implements SearchView.On
 
     @Override
     public boolean onQueryTextSubmit(String s) {
-        Toast.makeText(this, "Query : " + s, Toast.LENGTH_SHORT).show();
+        getData(s);
         return true;
     }
 
