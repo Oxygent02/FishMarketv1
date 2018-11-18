@@ -29,9 +29,9 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void click_signup(View view) {
-        SharedPreferences.Editor editor = sharedDataUser.edit();
-        editor.putString("parse_username",editUsername.getText().toString());
-        editor.apply();
+//        SharedPreferences.Editor editor = sharedDataUser.edit();
+//        editor.putString("parse_username",editUsername.getText().toString());
+//        editor.apply();
 
         Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
         startActivity(intent);

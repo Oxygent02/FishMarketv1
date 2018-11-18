@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<FishModel> arrFish = new ArrayList<>();
     int i = 0;
 
+    // Reinhard JS
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
