@@ -21,6 +21,9 @@ public class LoginActivity extends AppCompatActivity {
         editUsername = findViewById(R.id.edt_username);
 
         sharedLogin = getSharedPreferences("login", MODE_PRIVATE);
+
+        Intent intent = new Intent(LoginActivity.this, FishListActivity.class);
+        startActivity(intent);
     }
 
     public void click_login(View view) {

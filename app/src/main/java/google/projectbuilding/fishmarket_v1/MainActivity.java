@@ -21,6 +21,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import google.projectbuilding.fishmarket_v1.models.FishModel;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView welcome;

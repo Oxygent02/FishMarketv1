@@ -14,6 +14,8 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import google.projectbuilding.fishmarket_v1.models.FishModel;
+
 public class CustomAdapter extends ArrayAdapter<FishModel>{
 
     private ArrayList<FishModel> fishModels;
