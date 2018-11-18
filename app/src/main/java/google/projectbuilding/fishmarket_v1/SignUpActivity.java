@@ -23,14 +23,19 @@ public class SignUpActivity extends AppCompatActivity {
         noTelp = findViewById(R.id.edt_email);
         email = findViewById(R.id.edt_gender);
         tglLahir = findViewById(R.id.edt_tglLahir);
-        alamat = findViewById(R.id.edt_email);
+        alamat = findViewById(R.id.edt_alamat);
 
         sharedDataUser = getSharedPreferences("dataUser", MODE_PRIVATE);
     }
 
     public void click_signup(View view) {
         SharedPreferences.Editor editor = sharedDataUser.edit();
-        editor.putString("parse_username",editUsername.getText().toString());
+        editor.putString("parse_nama_user",nama.getText().toString());
+        editor.putString("parse_kota_user",kota.getText().toString());
+        editor.putString("parse_noTelp_user",noTelp.getText().toString());
+        editor.putString("parse_email_user",email.getText().toString());
+        editor.putString("parse_tglLahir_user",tglLahir.getText().toString());
+        editor.putString("parse_alamat_user",alamat.getText().toString());
         editor.apply();
 
         Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
