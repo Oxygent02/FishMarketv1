@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2699fb</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorButton">#2699fb</color>
+    <color name="colorDetailName">#c1c4c7</color>
+    <color name="colorButtonBeli">#f64e0e</color>
+
+    <color name="colorPutih">#ffffff</color>
+    <color name="colorLabelProfile">#413e3e</color>
+
+
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/img_fish"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:src="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/tv_fish_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="Nama Ikan"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_fish_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="15sp"
+        android:textColor="#f64e0e"
+        android:text="Rp. 100.000,00"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_nelayan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="15sp"
+        android:textColor="#cccccc"
+        android:text="Nelayan A"
+        android:textAlignment="center"/>
+
+</LinearLayout>

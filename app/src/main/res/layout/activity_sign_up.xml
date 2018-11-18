@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity"
+    android:background="@drawable/thumbnail"
+    android:gravity="center">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_username"
+            android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_nama"
+            android:hint="Nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_kota"
+            android:hint="Kota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_nomorTelp"
+            android:hint="Nomor Telepon"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_gender"
+            android:hint="Jenis Kelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_tglLahir"
+            android:hint="Tanggal Lahir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:imeOptions="actionGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_alamat"
+            android:hint="Alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/colorPutih"
+        android:textColorHint="@color/colorPutih">
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:imeOptions="actionGo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPutih"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar"
+        android:onClick="click_signup"
+        android:background="@color/colorButton"/>
+
+</LinearLayout>

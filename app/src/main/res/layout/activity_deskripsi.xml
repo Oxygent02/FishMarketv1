@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeskripsiActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_fish_detail"
+            android:layout_width="match_parent"
+            android:layout_height="148dp"
+            android:src="@color/colorButton"/>
+
+        <TextView
+            android:id="@+id/tv_fish_name_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="23.3dp"
+            android:text="Nama Ikan"
+            android:textColor="@color/colorDetailName"
+            android:textSize="17.3sp"/>
+
+        <TextView
+            android:id="@+id/tv_fish_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23.3dp"
+            android:textSize="15sp"
+            android:textColor="#f64e0e"
+            android:text="Rp. 100.000,00 /kg"/>
+
+        <LinearLayout
+            android:layout_width="273.3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23.3dp"
+            android:orientation="horizontal"
+            android:background="@color/colorDetailName"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STOK Terbatas! Tersedia "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kurang dari 20kg"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_label_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="23.3dp"
+            android:text="Deskripsi Produk"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23.3dp"
+            android:layout_marginTop="10dp"
+            android:text="DESKRIPSI"
+            android:textSize="12.3sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="23.3dp"
+            android:layout_marginRight="23.3dp"
+            android:orientation="horizontal"
+            android:background="@color/colorButtonBeli"
+            android:gravity="center"
+            android:onClick="click_beli">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BELI"
+                android:textColor="@color/colorPutih"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

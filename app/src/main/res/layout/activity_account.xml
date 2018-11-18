@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin"
+    tools:context=".AccountActivity">
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@color/colorButtonBeli"/>
+
+    <TextView
+        android:id="@+id/tv_nama_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAMA ORANG"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_kota_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kota, Provinsi"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="1dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_noTelp_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor Telepon"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="23.3dp"
+        android:textColor="@color/colorLabelProfile"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_noTelp_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08123456789"
+        android:layout_marginLeft="23.3dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_email_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="23.3dp"
+        android:textColor="@color/colorLabelProfile"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_email_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contoh@test.com"
+        android:layout_marginLeft="23.3dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_gender_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="23.3dp"
+        android:textColor="@color/colorLabelProfile"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_gender_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pria"
+        android:layout_marginLeft="23.3dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_tglLahir_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Lahir"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="23.3dp"
+        android:textColor="@color/colorLabelProfile"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_tglLahir_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20 Oktober 2019"
+        android:layout_marginLeft="23.3dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_Alamat_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Lahir"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="23.3dp"
+        android:textColor="@color/colorLabelProfile"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_Alamat_profile"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Perumahan Citra Gading, Karang Widoro, Dau, Kab. Malang, Jawa Timur"
+        android:layout_marginLeft="23.3dp"
+        android:textSize="12sp"/>
+
+</LinearLayout>
