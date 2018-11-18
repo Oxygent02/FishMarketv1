@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Perubahan master
 
+    // Perubahan reinhard
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
